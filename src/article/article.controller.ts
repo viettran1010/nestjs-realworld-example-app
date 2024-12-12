@@ -70,7 +70,7 @@ export class ArticleController {
     if (!params) throw new Error('test param')
     return this.articleService.delete(params.slug);
   }
-
+dawdaw
   @ApiOperation({ summary: 'Create comment' })
   @ApiResponse({ status: 201, description: 'The comment has been successfully created.'})
   @ApiResponse({ status: 403, description: 'Forbidden.' })
