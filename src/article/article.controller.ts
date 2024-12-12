@@ -67,6 +67,7 @@ export class ArticleController {
   @ApiResponse({ status: 403, description: 'Forbidden.' })
   @Delete(':slug')
   async delete(@Param() params) {
+    if (!params) throw new Error('test param')
     return this.articleService.delete(params.slug);
   }
 
